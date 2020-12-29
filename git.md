@@ -242,6 +242,14 @@ git checkout <sha1-of-a-commit> </path/to/your/file>  撤销单个文件到某�
 $ git status -sb   查看修改显示
 ```
 
+#### 切换远程分支
+
+```shell 
+git checkout -b  远程分支名称////release origin/release-9.4
+```
+
+
+
 npm run fix  修复问题
 
 'meeting-schx:根据最近ui设计稿调整会议列表-会议详情中会议信息议题与资料显示样式'
