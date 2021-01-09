@@ -92,6 +92,42 @@ uddi  基于soap 的
 
 
 
+一个工程多个服务
+
+project
+
+​            service-1
+
+​            service-2
+
+​               pom.xml
+
+​                module
+
+
+
+一个服务一个工程
+
+​        service-1
+
+​              module
+
+​              pom.xml
+
+​      service-2
+
+​              module
+
+​              pom.xml
+
+
+
+
+
+
+
+
+
 
 
 

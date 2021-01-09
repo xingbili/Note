@@ -266,19 +266,3 @@ npm run fix  修复问题
 
 
 
- result.cfrListPerson = result.cfrListPerson.concat(result.assignorPerson).concat(result.outPerson);
-
- result.outPerson = [];
-
-
-
- checkinResult.attendedPerson.forEach((*person*) *=>* {
-
-  if (*person*.deptName === '外部人员') {
-
-   result.outPerson.push(*person*);
-
-  }
-
- });
-
