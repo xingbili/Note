@@ -7,6 +7,13 @@ spring-boot-maven-plugin为Spring Boot Maven插件，提供了：
 把项目打包成一个可执行的超级JAR（uber-JAR）,包括把应用程序的所有依赖打入JAR文件内，并为JAR添加一个描述文件，其中的内容能让你用java -jar来运行应用程序。
 
 搜索public static void main()方法来标记为可运行类。
+    
+    
+    
+ SpringBootApplication 注解包含
+@EnableAutoConfiguration: enable Spring Boot’s auto-configuration mechanism
+@ComponentScan: enable @Component scan on the package where the application is located (see the best practices)
+@Configuration: allow to register extra beans in the context or import additional configuration classes
 ```
 
 ## 	Spring Boot一些基础配置
@@ -220,4 +227,6 @@ Profile用来针对不同的环境下使用不同的配置文件，多环境配�
 
 如：`spring.profiles.active=dev`就会加载application-dev.properties配置文件内容。可以在运行jar文件的时候使用命令`java -jar xxx.jar --spring.profiles.active={profile}`切换不同的环境配置。
 
+> e
+>
 > 

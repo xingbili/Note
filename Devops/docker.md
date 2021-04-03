@@ -60,7 +60,7 @@ Docker 利用容器技术，独立运行一个或者一组应用，通过镜像�
 
 仓库分为私有和共有
 
-### docker 安装
+### docker 安装(centos)
 
 #### 1、 卸载旧 的
 
@@ -131,6 +131,40 @@ sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json <<-'EOF' {  "registry
 docker 怎么工作
 docker 是一个 Client-Server 结构的系统，Docker 的守护进行运行在主机上，通过Socket 从客户端访问
 ```
+
+### docker安装（ubuntu）
+
+#### 卸载旧的
+
+```shell
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+ sudo apt-get update
+ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+    
+     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+     
+      echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+  apt-get update
+  sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+## docker-compose 安装
+
+```shell
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+
 
 ### docker命令：
 
